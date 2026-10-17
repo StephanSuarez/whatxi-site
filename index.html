@@ -3,33 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SUMA · Caso de estudio</title>
-  <meta name="description" content="SUMA, movilidad de confianza en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app del conductor en Flutter, API en Kotlin, panel de administración y web de seguimiento.">
-  <link rel="icon" href="media/suma-isotipo.png">
+  <title>Whatxi · Caso de estudio</title>
+  <meta name="description" content="Whatxi, viajes seguros en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app del conductor en Flutter, API en Kotlin, panel de administración y web de seguimiento.">
+  <link rel="icon" href="media/whatxi-isotipo.png">
   <script>document.documentElement.classList.add("js")</script>
   <style>
     :root {
-      --bg: #f5f7fa;
+      --bg: #f6f5f3;
       --surface: #ffffff;
-      --text: #000d1c;
-      --muted: #4a5568;
-      --line: #e8ecf2;
-      --accent: #2cc6a4;
-      --button: #2cc6a4;
-      --button-text: #000d1c;
-      --focus: #038de2;
+      --text: #201e1e;
+      --muted: #5e5856;
+      --line: #e9e6e4;
+      --accent: #ffcc29;
+      --button: #ffcc29;
+      --button-text: #201e1e;
+      --focus: #201e1e;
       --radius: 16px;
       color-scheme: light;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #000d1c;
-        --surface: #0d192d;
+        --bg: #201e1e;
+        --surface: #2a2727;
         --text: #ffffff;
-        --muted: #b2b7c0;
-        --line: #1b2a42;
-        --accent: #09eab3;
-        --focus: #00bbf4;
+        --muted: #b4aeac;
+        --line: #3a3636;
+        --accent: #ffcc29;
+        --focus: #ffcc29;
         color-scheme: dark;
       }
     }
@@ -73,7 +73,7 @@
       border-radius: 48px;
       overflow: hidden;
       background: #0e0e0e;
-      box-shadow: 0 24px 60px rgba(0, 13, 28, 0.14);
+      box-shadow: 0 24px 60px rgba(32, 30, 30, 0.14);
     }
     .phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .demo { justify-self: center; display: grid; justify-items: center; gap: 14px; }
@@ -93,7 +93,7 @@
     .moments { list-style: none; margin: 24px 0 0; padding: 0; }
     .moment { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; padding: 48px 0; border-top: 1px solid var(--line); }
     .moment:first-child { border-top: 0; }
-    .num { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #000d1c; font-weight: 700; font-size: 15px; }
+    .num { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #201e1e; font-weight: 700; font-size: 15px; }
     .moment h3 { font-size: 26px; margin-top: 14px; }
     .what { margin: 12px 0 0; }
     .behind { margin: 16px 0 0; padding-left: 14px; border-left: 3px solid var(--accent); color: var(--muted); font-size: 15px; }
@@ -111,7 +111,7 @@
     /* Panel de operación */
     .shot { margin: 0; }
     .shot.main { margin-top: 40px; }
-    .browser { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); box-shadow: 0 16px 40px rgba(0, 13, 28, 0.06); }
+    .browser { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); box-shadow: 0 16px 40px rgba(32, 30, 30, 0.06); }
     .bar { display: flex; gap: 6px; padding: 9px 12px; border-bottom: 1px solid var(--line); }
     .bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
     .browser img { display: block; width: 100%; height: auto; }
@@ -121,9 +121,9 @@
 
     /* Imagen ampliada */
     #viewer { padding: 0; border: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
-    #viewer::backdrop { background: rgba(0, 13, 28, 0.8); }
+    #viewer::backdrop { background: rgba(32, 30, 30, 0.8); }
     #viewer img { display: block; max-width: 96vw; max-height: 86vh; width: auto; height: auto; border-radius: 10px; }
-    #viewer button { position: absolute; top: -52px; right: 0; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: #000d1c; font-size: 26px; line-height: 1; cursor: pointer; }
+    #viewer button { position: absolute; top: -52px; right: 0; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: #201e1e; font-size: 26px; line-height: 1; cursor: pointer; }
     #viewer[open] { animation: viewer-in 0.2s ease-out; }
     @keyframes viewer-in { from { opacity: 0; transform: scale(0.97); } }
     html:has(#viewer[open]) { overflow: hidden; }
@@ -170,10 +170,10 @@
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="#" aria-label="SUMA">
+      <a class="brand" href="#" aria-label="Whatxi">
         <picture>
-          <source srcset="media/suma-logo-white.png" media="(prefers-color-scheme: dark)">
-          <img src="media/suma-logo-noche.png" alt="SUMA" width="166" height="30">
+          <source srcset="media/whatxi-logo-horizontal-blanco.png" media="(prefers-color-scheme: dark)">
+          <img src="media/whatxi-logo-horizontal.png" alt="Whatxi" width="125" height="30">
         </picture>
       </a>
     </header>
@@ -182,8 +182,8 @@
       <div class="hero">
         <div>
           <p class="eyebrow r">Caso de estudio · Full stack</p>
-          <h1 class="r" style="--d:60ms">SUMA</h1>
-          <p class="lead r" style="--d:120ms">Movilidad de confianza en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app para conductores, API, panel de administración y web de seguimiento.</p>
+          <h1 class="r" style="--d:60ms">Whatxi</h1>
+          <p class="lead r" style="--d:120ms">Viajes seguros en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app para conductores, API, panel de administración y web de seguimiento.</p>
           <div class="actions r" style="--d:180ms">
             <a class="btn btn-primary" href="#flujo">Cómo funciona un viaje</a>
           </div>
@@ -271,7 +271,7 @@
           <div class="r">
             <ul class="points">
               <li><h3>Carro o moto, según la jornada</h3><p>Un conductor puede registrar carros y motos, o manejar el vehículo de otro dueño que lo invite. Al conectarse elige con cuál trabaja ese día y solo recibe viajes de ese tipo. Cada vehículo lo usa un conductor a la vez.</p></li>
-              <li><h3>Saldo prepago</h3><p>Recarga desde la app con Nequi, PSE o tarjeta a través de Wompi, y cada recarga aprobada deja su comprobante. Si paga por otro medio, el equipo de SUMA le abona el saldo desde el panel.</p></li>
+              <li><h3>Saldo prepago</h3><p>Recarga desde la app con Nequi, PSE o tarjeta a través de Wompi, y cada recarga aprobada deja su comprobante. Si paga por otro medio, el equipo de Whatxi le abona el saldo desde el panel.</p></li>
               <li><h3>Una comisión por viaje</h3><p>Por cada viaje completado se descuenta del saldo una comisión: un valor fijo o un porcentaje de la tarifa, según el tipo de vehículo. La solicitud le muestra cuánto es antes de aceptar, los viajes cancelados no pagan y, si el saldo no alcanza, ese viaje no le llega. El pasajero le paga directamente al conductor.</p></li>
             </ul>
             <p class="behind"><b>En el sistema:</b> Se cobra la comisión vigente cuando el conductor aceptó el viaje; un cambio en el panel no altera los viajes que ya están en curso.</p>
@@ -283,7 +283,7 @@
       <section aria-labelledby="panel-t">
         <h2 id="panel-t" class="r">Panel de operación</h2>
         <p class="lead r" style="--d:80ms">El equipo valida conductores y vehículos, define las tarifas, los recargos y la comisión de cada tipo de vehículo, y revisa las recargas de saldo.</p>
-        <figure class="shot main r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicles.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicles.webp" alt="Lista de vehículos del panel de SUMA con contadores de total, validados y pendientes, y columnas de placa, tipo (Carro o Moto), dueño, estado y disponibilidad" loading="lazy" width="1600" height="1000"></a></div><figcaption>Vehículos: carros y motos en una sola lista, con los pendientes de validar primero.</figcaption></figure>
+        <figure class="shot main r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicles.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicles.webp" alt="Lista de vehículos del panel de Whatxi con contadores de total, validados y pendientes, y columnas de placa, tipo (Carro o Moto), dueño, estado y disponibilidad" loading="lazy" width="1600" height="1000"></a></div><figcaption>Vehículos: carros y motos en una sola lista, con los pendientes de validar primero.</figcaption></figure>
         <div class="shots">
           <figure class="shot r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicle-detail.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicle-detail.webp" alt="Detalle de una moto pendiente con placa, dueña, tipo, marca y modelo, tarjeta de propiedad de ejemplo y botón para validarla" loading="lazy" width="1100" height="688"></a></div><figcaption>Detalle de una moto pendiente: se valida aquí, después de revisar la tarjeta de propiedad.</figcaption></figure>
           <figure class="shot r" style="--d:100ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-fares.webp" aria-label="Ver imagen completa"><img src="media/admin-fares.webp" alt="Tarifas en vista Moto: hasta 2 km $4.000, hasta 4 km $6.000 y $1.000 por km adicional" loading="lazy" width="1100" height="688"></a></div><figcaption>Tarifas de moto por tramos de distancia; con al menos un tramo guardado, el bot ofrece moto a los pasajeros.</figcaption></figure>

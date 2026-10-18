@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Whatxi · Caso de estudio</title>
-  <meta name="description" content="Whatxi, viajes seguros en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app del conductor en Flutter, API en Kotlin, panel de administración y web de seguimiento.">
+  <meta name="description" content="Whatxi, taxis seguros en Fusagasugá: un servicio de taxi que se pide por WhatsApp, con app del Whatxista en Flutter, API en Kotlin, panel de administración y web de seguimiento.">
   <link rel="icon" href="media/whatxi-isotipo.png">
   <script>document.documentElement.classList.add("js")</script>
   <style>
@@ -183,7 +183,7 @@
         <div>
           <p class="eyebrow r">Caso de estudio · Full stack</p>
           <h1 class="r" style="--d:60ms">Whatxi</h1>
-          <p class="lead r" style="--d:120ms">Viajes seguros en Fusagasugá: viajes en carro particular y en moto que se piden por WhatsApp, con app para conductores, API, panel de administración y web de seguimiento.</p>
+          <p class="lead r" style="--d:120ms">Taxis seguros en Fusagasugá: un servicio de taxi que se pide por WhatsApp, con app para los Whatxistas, API, panel de administración y web de seguimiento.</p>
           <div class="actions r" style="--d:180ms">
             <a class="btn btn-primary" href="#flujo">Cómo funciona un viaje</a>
           </div>
@@ -191,7 +191,7 @@
         <div class="demo r" style="--d:120ms">
           <div class="phone">
             <video id="demo" src="media/suma-demo.mp4" poster="media/suma-demo-poster.webp" width="540" height="1174" autoplay muted loop playsinline
-                   aria-label="Video: la pasajera pide una moto por WhatsApp, el conductor acepta en la app, llega a la recogida, valida el código 2475, la lleva a la Universidad de Cundinamarca, cobra $4.000 en efectivo y ambos califican"></video>
+                   aria-label="Video: la pasajera pide un viaje por WhatsApp, el Whatxista acepta en la app, llega a la recogida, valida el código 2475, la lleva a la Universidad de Cundinamarca, cobra en efectivo y ambos califican"></video>
           </div>
           <button class="play" type="button">
             <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -204,90 +204,90 @@
       <section aria-labelledby="que">
         <h2 id="que" class="r">Qué resuelve</h2>
         <div class="features">
-          <div class="feature r" style="--d:0ms"><div class="dot"></div><h3>Pedidos por WhatsApp</h3><p>La pasajera elige carro o moto, comparte origen y destino y recibe un precio exacto antes de confirmar.</p></div>
-          <div class="feature r" style="--d:80ms"><div class="dot"></div><h3>Carros y motos</h3><p>Cada tipo tiene sus tarifas por distancia, sus recargos y su comisión; un viaje solo se ofrece a conductores conectados con ese tipo de vehículo.</p></div>
-          <div class="feature r" style="--d:160ms"><div class="dot"></div><h3>Registro con escáner de documentos</h3><p>El conductor escanea su cédula, su licencia y la tarjeta de propiedad desde la app; el equipo valida cada vehículo antes de que pueda trabajar.</p></div>
-          <div class="feature r" style="--d:240ms"><div class="dot"></div><h3>Saldo y comisión por viaje</h3><p>El conductor recarga saldo con Wompi y cada viaje descuenta una comisión configurable. Sin membresías.</p></div>
+          <div class="feature r" style="--d:0ms"><div class="dot"></div><h3>Pedidos por WhatsApp</h3><p>La pasajera comparte origen y destino y ve la tarifa antes de confirmar.</p></div>
+          <div class="feature r" style="--d:80ms"><div class="dot"></div><h3>Taxis verificados con QR</h3><p>Cada taxi lleva un QR en la parte trasera y otro en el interior: la pasajera los escanea para confirmar que el taxi y el Whatxista son los que le asignaron.</p></div>
+          <div class="feature r" style="--d:160ms"><div class="dot"></div><h3>Registro con escáner de documentos</h3><p>El Whatxista escanea su cédula, su licencia y la tarjeta de propiedad desde la app; el equipo valida cada taxi antes de que pueda trabajar.</p></div>
+          <div class="feature r" style="--d:240ms"><div class="dot"></div><h3>Saldo y comisión por viaje</h3><p>El Whatxista recarga saldo con Wompi y cada viaje descuenta una comisión configurable. Sin membresías.</p></div>
         </div>
       </section>
 
       <section id="flujo" aria-labelledby="flujo-t">
         <h2 id="flujo-t" class="r">Cómo funciona un viaje</h2>
-        <p class="lead r" style="--d:80ms">Cinco momentos de un mismo viaje en moto: lo que ve la pasajera, lo que ve el conductor y lo que hace el sistema.</p>
+        <p class="lead r" style="--d:80ms">Cinco momentos de un mismo viaje en taxi: lo que ve la pasajera, lo que ve el Whatxista y lo que hace el sistema.</p>
         <ol class="moments">
           <li class="moment">
             <div class="r">
               <span class="num">1</span>
-              <h3>La pasajera pide una moto</h3>
-              <p class="what">Escribe por WhatsApp, elige moto y comparte dónde la recogen. El conductor ya está conectado con su moto, esperando viajes.</p>
-              <p class="behind"><b>En el sistema:</b> El bot lleva la conversación paso a paso y solo pregunta «¿Carro o moto?» cuando las motos tienen tarifa configurada.</p>
+              <h3>La pasajera pide un taxi</h3>
+              <p class="what">Escribe por WhatsApp y comparte dónde la recogen. El Whatxista ya está conectado con su taxi, esperando viajes.</p>
+              <p class="behind"><b>En el sistema:</b> El bot lleva la conversación paso a paso: recogida, destino y confirmación. Todo pedido es de taxi, así que no pregunta por el tipo de vehículo.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-01-pedido.webp" alt="Chat con el bot: la pasajera elige moto y comparte la ubicación del Parque Coburgo" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-01-en-linea.webp" alt="App del conductor en línea, buscando viajes" loading="lazy" width="720" height="1565"><figcaption>Conductor · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-01-pedido.webp" alt="Chat con el bot: la pasajera comparte la ubicación del Parque Coburgo" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-01-en-linea.webp" alt="App del Whatxista en línea, buscando viajes" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
           <li class="moment">
             <div class="r">
               <span class="num">2</span>
-              <h3>Confirma el precio y un conductor acepta</h3>
-              <p class="what">Con el destino, recibe un precio exacto y lo confirma. La oferta le llega al conductor más cercano conectado con una moto, con la distancia, el precio y la comisión que se le descontará.</p>
-              <p class="behind"><b>En el sistema:</b> La API calcula la ruta y cotiza con los tramos de distancia de las motos. Cada oferta se reserva de forma atómica y el conductor tiene 40 segundos para responder; dos conductores nunca toman el mismo viaje.</p>
+              <h3>Confirma el viaje y un Whatxista acepta</h3>
+              <p class="what">Con el destino, ve la tarifa y confirma. La oferta le llega al Whatxista conectado más cercano, con la distancia, la tarifa y la comisión que se le descontará.</p>
+              <p class="behind"><b>En el sistema:</b> La API calcula la ruta y cotiza con el modelo de tarifa activo en el panel: por distancia o taxímetro. Cada oferta se reserva de forma atómica y el Whatxista tiene 40 segundos para responder; dos Whatxistas nunca toman el mismo viaje.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-02-precio.webp" alt="Chat con el resumen del servicio, tarifa de $4.000, confirmación y búsqueda de conductor" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-02-oferta.webp" alt="Nueva solicitud en la app: COP 4.000, cargo del 10 %, ruta del Parque Coburgo a la Universidad de Cundinamarca" loading="lazy" width="720" height="1565"><figcaption>Conductor · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-02-precio.webp" alt="Chat con el resumen del servicio, la tarifa, la confirmación y la búsqueda del Whatxista" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-02-oferta.webp" alt="Nueva solicitud en la app: COP 4.000, cargo del 10 %, ruta del Parque Coburgo a la Universidad de Cundinamarca" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
           <li class="moment">
             <div class="r">
               <span class="num">3</span>
               <h3>Recogida verificada</h3>
-              <p class="what">La pasajera recibe el nombre del conductor, la placa, un código de 4 dígitos y el enlace para seguir el viaje. Escanea el QR de la moto, en el tanque, y el del casco; el conductor ingresa el código para empezar.</p>
+              <p class="what">La pasajera recibe el nombre del Whatxista, la placa, un código de 4 dígitos y el enlace para seguir el viaje. Escanea el QR de la parte trasera del taxi y el del interior; el Whatxista ingresa el código para empezar.</p>
               <p class="behind"><b>En el sistema:</b> El código se genera al asignar el viaje y la API lo valida, con intentos limitados, antes de iniciarlo.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-03-asignado.webp" alt="Chat con el conductor asignado, la placa, el código de seguridad y las indicaciones del QR en el tanque y en el casco" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-03-codigo.webp" alt="Panel del viaje en la app con el campo del código de verificación" loading="lazy" width="720" height="1565"><figcaption>Conductor · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-03-asignado.webp" alt="Chat con el Whatxista asignado, la placa, el código de seguridad y las indicaciones para escanear los QR" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-03-codigo.webp" alt="Panel del viaje en la app con el campo del código de verificación" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
           <li class="moment">
             <div class="r">
               <span class="num">4</span>
               <h3>Camino al destino</h3>
-              <p class="what">El conductor sigue la ruta en la app, o en Waze o Google Maps si prefiere. La pasajera ve la moto en vivo desde el enlace del chat.</p>
+              <p class="what">El Whatxista sigue la ruta en la app, o en Waze o Google Maps si prefiere. La pasajera ve el taxi en vivo desde el enlace del chat.</p>
               <p class="behind"><b>En el sistema:</b> La app envía su ubicación cada 15 segundos; la página de seguimiento pide una actualización a la vez y corta a los pocos segundos si la API no responde.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/web-en-curso.webp" alt="Mapa en vivo del viaje hacia el destino, con el conductor y la placa" loading="lazy" width="720" height="1565"><figcaption>Pasajera · Web</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-04-en-curso.webp" alt="Navegación hacia el destino en la app, con la distancia restante y la hora de llegada" loading="lazy" width="720" height="1565"><figcaption>Conductor · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/web-en-curso.webp" alt="Mapa en vivo del viaje hacia el destino, con el Whatxista y la placa" loading="lazy" width="720" height="1565"><figcaption>Pasajera · Web</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-04-en-curso.webp" alt="Navegación hacia el destino en la app, con la distancia restante y la hora de llegada" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
           <li class="moment">
             <div class="r">
               <span class="num">5</span>
               <h3>Llegada, pago y calificación</h3>
-              <p class="what">Al llegar, la pasajera paga en efectivo el precio acordado y ambos se califican. Del saldo del conductor se descuenta la comisión del viaje.</p>
-              <p class="behind"><b>En el sistema:</b> El precio final es el cotizado. La comisión se descuenta una sola vez por viaje, aunque la app reintente, y cada movimiento del saldo queda registrado.</p>
+              <p class="what">Al llegar, la pasajera paga en efectivo el valor del viaje y ambos se califican. Del saldo del Whatxista se descuenta la comisión del viaje.</p>
+              <p class="behind"><b>En el sistema:</b> La tarifa queda congelada al cotizar: por distancia, el precio cotizado es el final; con taxímetro, el valor final suma la distancia de la ruta y el tiempo transcurrido. La comisión se descuenta una sola vez por viaje, aunque la app reintente, y cada movimiento del saldo queda registrado.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-04-final.webp" alt="Chat con el valor final de $4.000 y la invitación a calificar al conductor" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-05-cobro.webp" alt="Viaje finalizado en la app: $4.000 para cobrar en efectivo" loading="lazy" width="720" height="1565"><figcaption>Conductor · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/wa-04-final.webp" alt="Chat con el valor final del viaje y la invitación a calificar al Whatxista" loading="lazy" width="720" height="1565"><figcaption>Pasajera · WhatsApp</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-05-cobro.webp" alt="Viaje finalizado en la app, con el valor para cobrar en efectivo" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
         </ol>
         <p class="note r">Las pantallas de WhatsApp son una recreación con los mensajes reales del bot. Todos los datos son de demostración.</p>
       </section>
 
       <section aria-labelledby="cond-t">
-        <h2 id="cond-t" class="r">Para los conductores</h2>
-        <p class="lead r" style="--d:80ms">La misma app con la que reciben viajes les sirve para elegir vehículo, recargar saldo y ver la comisión de cada viaje antes de aceptarlo.</p>
+        <h2 id="cond-t" class="r">Para los Whatxistas</h2>
+        <p class="lead r" style="--d:80ms">La misma app con la que reciben viajes les sirve para elegir el taxi de la jornada, recargar saldo y ver la comisión de cada viaje antes de aceptarlo.</p>
         <div class="moment solo">
           <div class="r">
             <ul class="points">
-              <li><h3>Carro o moto, según la jornada</h3><p>Un conductor puede registrar carros y motos, o manejar el vehículo de otro dueño que lo invite. Al conectarse elige con cuál trabaja ese día y solo recibe viajes de ese tipo. Cada vehículo lo usa un conductor a la vez.</p></li>
+              <li><h3>Su taxi o el de otro dueño</h3><p>Un Whatxista puede registrar sus taxis o manejar el de otro dueño que lo invite. Al conectarse elige con cuál trabaja ese día. Cada taxi lo usa un Whatxista a la vez.</p></li>
               <li><h3>Saldo prepago</h3><p>Recarga desde la app con Nequi, PSE o tarjeta a través de Wompi, y cada recarga aprobada deja su comprobante. Si paga por otro medio, el equipo de Whatxi le abona el saldo desde el panel.</p></li>
-              <li><h3>Una comisión por viaje</h3><p>Por cada viaje completado se descuenta del saldo una comisión: un valor fijo o un porcentaje de la tarifa, según el tipo de vehículo. La solicitud le muestra cuánto es antes de aceptar, los viajes cancelados no pagan y, si el saldo no alcanza, ese viaje no le llega. El pasajero le paga directamente al conductor.</p></li>
+              <li><h3>Una comisión por viaje</h3><p>Por cada viaje completado se descuenta del saldo una comisión: un valor fijo o un porcentaje de la tarifa. La solicitud le muestra cuánto es antes de aceptar, los viajes cancelados no pagan y, si el saldo no alcanza, ese viaje no le llega. El pasajero le paga directamente al Whatxista.</p></li>
             </ul>
-            <p class="behind"><b>En el sistema:</b> Se cobra la comisión vigente cuando el conductor aceptó el viaje; un cambio en el panel no altera los viajes que ya están en curso.</p>
+            <p class="behind"><b>En el sistema:</b> Se cobra la comisión vigente cuando el Whatxista aceptó el viaje; un cambio en el panel no altera los viajes que ya están en curso.</p>
           </div>
-          <div class="phones"><figure class="r" style="--d:140ms"><img src="media/app-06-vehiculos.webp" alt="Selector de la app para elegir el vehículo de la jornada: una moto MTO12D y un carro JHK413 del mismo dueño" loading="lazy" width="720" height="1565"><figcaption>Conductor · Vehículo</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-07-saldo.webp" alt="Pantalla de Saldo: $27.000 disponibles, botón para recargar, dos recargas sin completar marcadas como vencidas, una recarga por Nequi de $20.000 y un cargo de $400 por viaje" loading="lazy" width="720" height="1565"><figcaption>Conductor · Saldo</figcaption></figure></div>
+          <div class="phones"><figure class="r" style="--d:140ms"><img src="media/app-06-vehiculos.webp" alt="Captura de la app del Whatxista: selector del vehículo con el que trabaja en la jornada" loading="lazy" width="720" height="1565"><figcaption>Whatxista · Vehículo</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-07-saldo.webp" alt="Pantalla de Saldo: $27.000 disponibles, botón para recargar, dos recargas sin completar marcadas como vencidas, una recarga por Nequi de $20.000 y un cargo de $400 por viaje" loading="lazy" width="720" height="1565"><figcaption>Whatxista · Saldo</figcaption></figure></div>
         </div>
       </section>
 
       <section aria-labelledby="panel-t">
         <h2 id="panel-t" class="r">Panel de operación</h2>
-        <p class="lead r" style="--d:80ms">El equipo valida conductores y vehículos, define las tarifas, los recargos y la comisión de cada tipo de vehículo, y revisa las recargas de saldo.</p>
-        <figure class="shot main r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicles.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicles.webp" alt="Lista de vehículos del panel de Whatxi con contadores de total, validados y pendientes, y columnas de placa, tipo (Carro o Moto), dueño, estado y disponibilidad" loading="lazy" width="1600" height="1000"></a></div><figcaption>Vehículos: carros y motos en una sola lista, con los pendientes de validar primero.</figcaption></figure>
+        <p class="lead r" style="--d:80ms">El equipo valida a los Whatxistas y sus taxis, define las tarifas, los recargos y la comisión, y revisa las recargas de saldo.</p>
+        <figure class="shot main r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicles.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicles.webp" alt="Captura del panel de Whatxi: lista de vehículos con contadores de total, validados y pendientes, y columnas de placa, dueño, estado y disponibilidad" loading="lazy" width="1600" height="1000"></a></div><figcaption>Vehículos: todos los taxis en una lista, con los pendientes de validar primero.</figcaption></figure>
         <div class="shots">
-          <figure class="shot r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicle-detail.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicle-detail.webp" alt="Detalle de una moto pendiente con placa, dueña, tipo, marca y modelo, tarjeta de propiedad de ejemplo y botón para validarla" loading="lazy" width="1100" height="688"></a></div><figcaption>Detalle de una moto pendiente: se valida aquí, después de revisar la tarjeta de propiedad.</figcaption></figure>
-          <figure class="shot r" style="--d:100ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-fares.webp" aria-label="Ver imagen completa"><img src="media/admin-fares.webp" alt="Tarifas en vista Moto: hasta 2 km $4.000, hasta 4 km $6.000 y $1.000 por km adicional" loading="lazy" width="1100" height="688"></a></div><figcaption>Tarifas de moto por tramos de distancia; con al menos un tramo guardado, el bot ofrece moto a los pasajeros.</figcaption></figure>
-          <figure class="shot r" style="--d:200ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-wallet.webp" aria-label="Ver imagen completa"><img src="media/admin-wallet.webp" alt="Pantalla de Saldo con la regla de cobro de motos (10 % por viaje), las recargas de los conductores con su comprobante y los cobros por viaje" loading="lazy" width="1100" height="688"></a></div><figcaption>Saldo: reglas de recarga y cobro por tipo de vehículo, recargas con su comprobante y cobros por viaje.</figcaption></figure>
+          <figure class="shot r" style="--d:0ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-vehicle-detail.webp" aria-label="Ver imagen completa"><img src="media/admin-vehicle-detail.webp" alt="Captura del panel de Whatxi: detalle de un vehículo pendiente con placa, dueña, marca y modelo, tarjeta de propiedad de ejemplo y botón para validarlo" loading="lazy" width="1100" height="688"></a></div><figcaption>Detalle de un vehículo pendiente: se valida aquí, después de revisar la tarjeta de propiedad.</figcaption></figure>
+          <figure class="shot r" style="--d:100ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-fares.webp" aria-label="Ver imagen completa"><img src="media/admin-fares.webp" alt="Captura del panel de Whatxi: pantalla de tarifas" loading="lazy" width="1100" height="688"></a></div><figcaption>Tarifas: el equipo define desde el panel los valores con los que se cotiza cada viaje.</figcaption></figure>
+          <figure class="shot r" style="--d:200ms"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="media/admin-wallet.webp" aria-label="Ver imagen completa"><img src="media/admin-wallet.webp" alt="Pantalla de Saldo con la regla de cobro (10 % por viaje), las recargas de los Whatxistas con su comprobante y los cobros por viaje" loading="lazy" width="1100" height="688"></a></div><figcaption>Saldo: reglas de recarga y cobro, recargas con su comprobante y cobros por viaje.</figcaption></figure>
         </div>
       </section>
 
@@ -296,7 +296,7 @@
         <div class="arch">
           <div class="col">
             <div class="node r" style="--d:0ms">Pasajero<small>WhatsApp Business</small></div>
-            <div class="node r" style="--d:70ms">App del conductor<small>Flutter</small></div>
+            <div class="node r" style="--d:70ms">App del Whatxista<small>Flutter</small></div>
             <div class="node r" style="--d:140ms">Panel de administración<small>Next.js</small></div>
             <div class="node r" style="--d:210ms">Web de seguimiento<small>Next.js</small></div>
           </div>

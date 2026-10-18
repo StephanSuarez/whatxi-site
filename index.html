@@ -6,6 +6,9 @@
   <title>Whatxi · Caso de estudio</title>
   <meta name="description" content="Whatxi, taxis seguros en Fusagasugá: un servicio de taxi que se pide por WhatsApp, con app del Whatxista en Flutter, API en Kotlin, panel de administración y web de seguimiento.">
   <link rel="icon" href="media/whatxi-isotipo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("js")</script>
   <style>
     :root {
@@ -38,46 +41,53 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font: 17px/1.55 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
     section { padding: 96px 0 0; }
-    h1, h2, h3 { margin: 0; letter-spacing: -0.02em; line-height: 1.15; }
+    h1, h2, h3 { margin: 0; font-family: Outfit, Inter, sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
     h2 { font-size: clamp(28px, 4vw, 38px); }
     .lead { color: var(--muted); max-width: 56ch; margin: 12px 0 0; }
     .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
-    /* Encabezado */
-    header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    /* Hero: banda amarilla de taxi (propuesta B aprobada el 2026-10-18), igual en modo claro y oscuro */
+    .band { background: #ffcc29; color: #201e1e; padding: 20px 0 80px; }
+    .band :focus-visible { outline-color: #201e1e; }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 60px; padding: 0 12px 0 22px; background: #201e1e; border-radius: 18px; }
+    .nav :focus-visible { outline-color: #ffcc29; }
     .brand { display: flex; align-items: center; text-decoration: none; }
-    .brand img { height: 30px; width: auto; display: block; }
-
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; padding: 48px 0 0; }
-    .hero h1 { font-size: clamp(44px, 7vw, 72px); margin-top: 12px; }
-    .hero .lead { font-size: 20px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: 16px; text-decoration: none; }
-    .btn-primary { background: var(--button); color: var(--button-text); }
+    .brand img { height: 26px; width: auto; display: block; }
+    .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+    .nav ul a { display: block; padding: 10px 12px; color: #fefefe; text-decoration: none; font-size: 15px; font-weight: 500; }
+    .nav ul a:hover { color: #ffcc29; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 56px 0 0; }
+    .hero h1 { font-size: clamp(44px, 6.4vw, 78px); line-height: 1.02; margin-top: 14px; }
+    .band .eyebrow, .band .lead { color: #3b3631; }
+    .hero .lead { font-size: 20px; margin-top: 20px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 14px; font-weight: 600; font-size: 16px; text-decoration: none; }
+    .btn svg { width: 18px; height: 18px; }
+    .btn-dark { background: #201e1e; color: #ffcc29; }
     .btn { transition: transform 0.15s ease-out, opacity 0.15s ease-out; }
-    .btn-primary:hover { opacity: 0.88; }
+    .btn-dark:hover { opacity: 0.9; }
     .btn:active { transform: scale(0.98); }
+    .link { font-weight: 600; text-underline-offset: 4px; }
+    .demo { display: grid; justify-items: center; gap: 18px; }
+    .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: min(540px, 100%); }
+    .duo .phone:last-child { margin-top: 72px; }
     .phone {
-      justify-self: center;
-      width: min(320px, 78vw);
       aspect-ratio: 720 / 1565;
-      border: 10px solid #0e0e0e;
-      border-radius: 48px;
+      border: 9px solid #0f0e0e;
+      border-radius: 40px;
       overflow: hidden;
-      background: #0e0e0e;
-      box-shadow: 0 24px 60px rgba(32, 30, 30, 0.14);
+      background: #0f0e0e;
+      box-shadow: 0 28px 56px rgba(32, 30, 30, 0.28);
     }
     .phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .demo { justify-self: center; display: grid; justify-items: center; gap: 14px; }
-    .play { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
+    .play { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: #201e1e; color: #fefefe; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
     .play svg { width: 14px; height: 14px; fill: currentColor; }
     .play .i-play, .play.paused .i-pause { display: none; }
     .play.paused .i-play { display: block; }
@@ -100,7 +110,7 @@
     .behind b { color: var(--text); font-weight: 600; }
     .phones { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 480px; justify-self: end; }
     .phones figure { margin: 0; }
-    .phones img { width: 100%; height: auto; display: block; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); }
+    .phones img, .phones video { width: 100%; height: auto; display: block; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); }
     .phones figcaption { margin-top: 10px; text-align: center; font-size: 14px; color: var(--muted); }
     .note { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
     .moment.solo { border-top: 0; }
@@ -145,7 +155,11 @@
 
     @media (max-width: 860px) {
       section { padding-top: 72px; }
-      .hero { grid-template-columns: 1fr; gap: 40px; }
+      .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; }
+      .nav ul { display: none; }
+      .duo { gap: 14px; }
+      .duo .phone { border-width: 6px; border-radius: 28px; }
+      .duo .phone:last-child { margin-top: 48px; }
       .features { grid-template-columns: 1fr 1fr; }
       .moment { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
       .phones { max-width: none; justify-self: stretch; gap: 12px; }
@@ -168,30 +182,32 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#" aria-label="Whatxi">
-        <picture>
-          <source srcset="media/whatxi-logo-horizontal-blanco.png" media="(prefers-color-scheme: dark)">
-          <img src="media/whatxi-logo-horizontal.png" alt="Whatxi" width="125" height="30">
-        </picture>
-      </a>
-    </header>
-
-    <main>
+  <header class="band">
+    <div class="wrap">
+      <nav class="nav" aria-label="Principal">
+        <a class="brand" href="#" aria-label="Whatxi"><img src="media/whatxi-logo-horizontal-blanco.png" alt="" width="108" height="26"></a>
+        <ul>
+          <li><a href="#flujo">Cómo funciona</a></li>
+          <li><a href="#cond-t">Para Whatxistas</a></li>
+          <li><a href="#arq">Arquitectura</a></li>
+        </ul>
+      </nav>
       <div class="hero">
         <div>
           <p class="eyebrow r">Caso de estudio · Full stack</p>
-          <h1 class="r" style="--d:60ms">Whatxi</h1>
-          <p class="lead r" style="--d:120ms">Taxis seguros en Fusagasugá: un servicio de taxi que se pide por WhatsApp, con app para los Whatxistas, API, panel de administración y web de seguimiento.</p>
+          <h1 class="r" style="--d:60ms">Tu taxi seguro, pedido por WhatsApp.</h1>
+          <p class="lead r" style="--d:120ms">Whatxi conecta a la pasajera con un taxi verificado en Fusagasugá: pide por WhatsApp, recibe la placa y un código de seguridad, y sigue el viaje en vivo. Con app para los Whatxistas, API, panel de administración y web de seguimiento.</p>
           <div class="actions r" style="--d:180ms">
-            <a class="btn btn-primary" href="#flujo">Cómo funciona un viaje</a>
+            <a class="btn btn-dark" href="#flujo">Cómo funciona un viaje <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="link" href="#arq">Ver la arquitectura</a>
           </div>
         </div>
         <div class="demo r" style="--d:120ms">
-          <div class="phone">
-            <video id="demo" src="media/whatxi-demo.mp4" poster="media/whatxi-demo-poster.webp" width="540" height="1174" autoplay muted loop playsinline
-                   aria-label="Video: la pasajera pide un taxi por WhatsApp, el Whatxista acepta en la app, valida el código 6548 en la recogida, la lleva a la Universidad de Cundinamarca, la pasajera sigue el viaje en la web y al final se cobra en efectivo"></video>
+          <div class="duo">
+            <div class="phone"><video class="sync" src="media/demo-pasajera.mp4" poster="media/demo-pasajera.webp" width="720" height="1565" autoplay muted playsinline
+                   aria-label="Video, lado de la pasajera: pide el taxi por WhatsApp, confirma la tarifa, recibe el Whatxista, la placa y el código, y al final califica el viaje"></video></div>
+            <div class="phone"><video class="sync" src="media/demo-whatxista.mp4" poster="media/demo-whatxista.webp" width="720" height="1565" autoplay muted playsinline
+                   aria-label="Video, lado del Whatxista: recibe la oferta, la acepta, va a la recogida, ingresa el código, sigue la ruta al destino y cobra en efectivo"></video></div>
           </div>
           <button class="play" type="button">
             <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -200,7 +216,11 @@
           </button>
         </div>
       </div>
+    </div>
+  </header>
 
+  <div class="wrap">
+    <main>
       <section aria-labelledby="que">
         <h2 id="que" class="r">Qué resuelve</h2>
         <div class="features">
@@ -249,7 +269,7 @@
               <p class="what">El Whatxista sigue la ruta en la app, o en Waze o Google Maps si prefiere. La pasajera ve el taxi en vivo desde el enlace del chat.</p>
               <p class="behind"><b>En el sistema:</b> La app envía su ubicación cada 15 segundos; la página de seguimiento pide una actualización a la vez y corta a los pocos segundos si la API no responde.</p>
             </div>
-            <div class="phones"><figure class="r" style="--d:140ms"><img src="media/web-en-curso.webp" alt="Mapa en vivo del viaje hacia el destino, con el Whatxista y la placa" loading="lazy" width="720" height="1565"><figcaption>Pasajera · Web</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-04-en-curso.webp" alt="Navegación hacia el destino en la app, con la distancia restante y la hora de llegada" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
+            <div class="phones"><figure class="r" style="--d:140ms"><video class="live" src="media/web-en-vivo.mp4" poster="media/web-en-curso.webp" width="720" height="1565" muted loop playsinline preload="none" aria-label="Video: el taxi avanza en vivo por la ruta hacia el destino en la página de seguimiento, con el Whatxista y la placa"></video><figcaption>Pasajera · Web</figcaption></figure><figure class="r" style="--d:260ms"><img src="media/app-04-en-curso.webp" alt="Navegación hacia el destino en la app, con la distancia restante y la hora de llegada" loading="lazy" width="720" height="1565"><figcaption>Whatxista · App</figcaption></figure></div>
           </li>
           <li class="moment">
             <div class="r">
@@ -360,20 +380,37 @@
     viewer.addEventListener('close', () => { if (history.state?.viewer) history.back(); });
     addEventListener('popstate', () => { if (viewer.open) viewer.close(); });
 
-    const demo = document.getElementById('demo');
+    // Los dos teléfonos del hero son un mismo viaje: arrancan, se pausan y vuelven a empezar juntos.
+    const sync = [...document.querySelectorAll('video.sync')];
     const play = document.querySelector('.play');
     const showPaused = (paused) => {
       play.classList.toggle('paused', paused);
       play.querySelector('span').textContent = paused ? 'Reproducir video' : 'Pausar video';
     };
-    play.addEventListener('click', () => (demo.paused ? demo.play() : demo.pause()));
-    demo.addEventListener('play', () => showPaused(false));
-    demo.addEventListener('pause', () => showPaused(true));
-    showPaused(demo.paused);
+    const playAll = () => sync.forEach((v) => v.play().catch(() => {}));
+    play.addEventListener('click', () => {
+      if (sync[0].paused) playAll(); else sync.forEach((v) => v.pause());
+    });
+    sync[0].addEventListener('play', () => showPaused(false));
+    sync[0].addEventListener('pause', () => showPaused(sync[0].ended ? false : true));
+    // Sin loop nativo: cuando el más largo termina, los dos vuelven al inicio a la vez.
+    let ended = 0;
+    sync.forEach((v) => v.addEventListener('ended', () => {
+      if (++ended < sync.length) return;
+      ended = 0;
+      sync.forEach((x) => { x.currentTime = 0; });
+      playAll();
+    }));
+    showPaused(sync[0].paused);
+
+    // El taxi en vivo del paso 4 solo corre mientras se ve.
+    const live = document.querySelector('video.live');
+    if (live && observer) new IntersectionObserver(([e]) => (e.isIntersecting ? live.play().catch(() => {}) : live.pause()), { threshold: 0.3 }).observe(live);
+
     // Sin reproducción automática para quien prefiere menos movimiento.
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      demo.removeAttribute('autoplay');
-      demo.pause();
+      [...sync, live].forEach((v) => { if (v) { v.removeAttribute('autoplay'); v.pause(); } });
+      showPaused(true);
     }
   </script>
 </body>
